@@ -5,6 +5,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def rangeSumBST(self, root: 'TreeNode', L: 'int', R: 'int') -> 'int':
         if not root:
