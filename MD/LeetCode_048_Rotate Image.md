@@ -52,7 +52,7 @@ rotate the input matrix in-place such that it becomes:
 * 因為規定使用in-place，所以每次旋轉四個數值。
 
 ### Code
-```python=
+```python
 class Solution:
     def rotate(self, matrix: 'List[List[int]]') -> 'None':
         """
@@ -72,25 +72,26 @@ class Solution:
 
 ## Solution2
 
-* 以鏡像操作的方式先上下轉再左右轉。
+* 以鏡像操作的方式先上下列互換。
+* 再左下右上互換。
 
 ### Code
-```python=
+```python
 class Solution:
     def rotate(self, matrix: 'List[List[int]]') -> 'None':
         """
         Do not return anything, modify matrix in-place instead.
         """
-        rowsMaxIndex = len(matrix) - 1
-        columnsMaxIndex = len(matrix[0]) - 1
-        times = round(len(matrix) / 2)
+        for addValue in range(len(matrix)//2):
+            tempList = matrix[0 + addValue]
+            matrix[0 + addValue] = matrix[-1-addValue]
+            matrix[-1 - addValue] = tempList
 
-        for time in range(0, times):
-            for index, temp in enumerate(matrix[time][time:columnsMaxIndex - time]):
-                matrix[time][index + time] = matrix[rowsMaxIndex - index - time][time]
-                matrix[rowsMaxIndex - index - time][time] = matrix[rowsMaxIndex - time][rowsMaxIndex - time - index]
-                matrix[rowsMaxIndex - time][rowsMaxIndex - time - index] = matrix[index + time][columnsMaxIndex - time]
-                matrix[index + time][columnsMaxIndex - time] = temp
+        for row in range(0, len(matrix)-1):
+            for column in range(row + 1, len(matrix[0])):
+                temp = matrix[row][column]
+                matrix[row][column] = matrix[column][row]
+                matrix[column][row] = temp
 ```
 
 ###### tags: `LeetCode` `python` `Rotate Image` 
