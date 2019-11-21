@@ -96,7 +96,7 @@ class Solution:
 ```
 ## Solution2
 * 記錄所有出現過的 row , column , square 的數字及相應位置。
-* 最后利用 set 判断是否有重复。
+* 最后利用 set 判断是否有重複。
 
 ### Code2
 ```python
