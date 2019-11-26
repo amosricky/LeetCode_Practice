@@ -83,7 +83,7 @@ class Solution:
 
         return self.res
 ```
-## Solutio3
+## Solution3
 #### non-recursive : Threaded Binary Tree (引線二元樹)解法
 
 ![](https://github.com/shenyun2304/swift-algorithm-club-zhTW/raw/master/Threaded%20Binary%20Tree/Images/Partial.png)
