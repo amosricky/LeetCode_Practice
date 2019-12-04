@@ -25,10 +25,10 @@ Explanation: "mee" matches the pattern because there is a permutation {a -> m, b
 since a and b map to the same letter.
 ```
 
-## Solution
+## Solution1
 * 利用 Map 儲存 Pattern mapping word 的 rule。
 
-### Code
+### Code1
 ```python
 class Solution:
     def findAndReplacePattern(self, words: 'List[str]', pattern: 'str') -> 'List[str]':
@@ -54,4 +54,39 @@ class Solution:
         return res
 ```
 
-###### tags: `LeetCode` `python` `Find and Replace Pattern` 
+## Solution2
+* Golang 版本，作法差不多，但 Golang 無法直接取 map.value() ， 故多一變數 added 來紀錄。
+
+### Code2
+<pre><code>
+package main
+
+import "fmt"
+
+func findAndReplacePattern(words []string, pattern string) []string {
+	var res []string
+
+	for _, word := range words {
+		//ruleKeys := reflect.ValueOf(rule).MapKeys()
+		rule := make(map[string]string)
+		added := make(map[string]string)
+		check := true
+		for key, value := range word{
+			if (len(rule[string(pattern[key])]) == 0) && (len(added[string(value)]) == 0) {
+				rule[string(pattern[key])] = string(value)
+				added[string(value)] = string(pattern[key])
+			}else if rule[string(pattern[key])] == string(value){
+				continue
+			}else {
+				check = false
+				break
+			}
+		}
+		if check{
+			res = append(res, word)
+		}
+	}
+	return res
+}
+</code></pre>
+###### tags: `LeetCode` `python` `golang` `Find and Replace Pattern` 
