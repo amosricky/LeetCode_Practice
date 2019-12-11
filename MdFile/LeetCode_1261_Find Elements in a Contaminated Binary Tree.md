@@ -158,7 +158,7 @@ class FindElements:
 * 將 target + 1 後轉為 binary。
 * 從 binary 中取 str , 為 0 往左 , 為 1 往右。
 * 速度提昇。
-
+![](https://assets.leetcode.com/users/qingdu_river/image_1573968285.png)
 ### Code3
 ```python
 # Definition for a binary tree node.
@@ -210,7 +210,7 @@ class FindElements:
 * 速度普通。
 
 ### Code4
-<pre><code>
+```golang
 package main
 
 import (
@@ -269,7 +269,7 @@ func (f *FindElements) Find(target int) bool {
 	}
 	return res
 }
-</code></pre>
+```
 
 ## Solution5
 * non-recursive 方式建 tree。
@@ -278,7 +278,7 @@ func (f *FindElements) Find(target int) bool {
 * 速度提昇。
 
 ### Code5
-<pre><code>
+```golang
 package main
 
 import (
@@ -346,6 +346,6 @@ func (f *FindElements) Find(target int) bool {
 	}
 	return res
 }
-</code></pre>
+```
 
 ###### tags: `LeetCode` `python` `golang` `Find Elements in a Contaminated Binary Tree` 
