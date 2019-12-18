@@ -42,11 +42,11 @@ Input: queens = [[5,6],[7,7],[2,1],[0,7],[1,6],[5,1],[3,7],[0,3],[4,0],[1,2],[6,
 Output: [[2,3],[1,4],[1,6],[3,7],[4,3],[5,4],[4,5]]
 ```
 
-## Solution
+## Solution1
 * 以 King 為起始位置，往上下左右及對角（共 8 個方向找尋）。
 * 若發現 Queen 則加入 result list，停止搜尋往下個方向找。
 
-### Code
+### Code1
 ```python
 class Solution:
     def queensAttacktheKing(self, queens: "List[List[int]]", king: "List[int]") -> "List[List[int]]":
@@ -62,5 +62,50 @@ class Solution:
                 newLocation = [sum(i) for i in zip(newLocation, direction)]
         return res
 ```
+## Solution2
+* 同樣方法 Golang version。
 
-###### tags: `LeetCode` `python` `Queens That Can Attack the King` 
+### Code2
+```golang
+package main
+
+import "fmt"
+
+func queensAttacktheKing(queens [][]int, king []int) [][]int {
+	type direction = [2]int
+	directionMap := [8]direction{{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1},{0,-1}}
+	var result [][]int
+
+	for _, direct := range directionMap{
+		location := []int{king[0]+direct[0], king[1]+direct[1]}
+		for{
+			if check:=find(location, queens); check{
+				result = append(result, location)
+				break
+			}
+
+			location = []int{location[0]+direct[0], location[1]+direct[1]}
+
+			if !(-1 < location[0] && location[0] < 8 && -1 < location[1] && location[1] < 8){
+				break
+			}
+		}
+
+	}
+
+	return result
+}
+
+func find(location []int, queens [][]int) bool {
+	res := false
+	for _, queen := range queens{
+		if queen[0] == location[0] && queen[1] == location[1]{
+			res = true
+			break
+		}
+	}
+	return res
+}
+```
+
+###### tags: `LeetCode` `python` `Golang` `Queens That Can Attack the King` 
