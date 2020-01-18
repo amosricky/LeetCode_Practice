@@ -14,7 +14,6 @@ class Solution:
             tempNums.pop(index)
             if len(tempNums):
                 self.find(tempNums, tempANS + [value])
-                continue
             else:
                 self.res.append(tempANS + [value])
         return
