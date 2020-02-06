@@ -25,6 +25,7 @@
 * [LeetCode_890_Find and Replace Pattern](./MdFile/LeetCode_890_Find%20and%20Replace%20Pattern.md)
 * [LeetCode_938_Range Sum of BST](./MdFile/LeetCode_938_Range%20Sum%20of%20BST.md)
 * [LeetCode_950_Reveal Cards In Increasing Order](./MdFile/LeetCode_950_Reveal%20Cards%20In%20Increasing%20Order.md)
+* [LeetCode_983_Minimum Cost For Tickets](./MdFile/LeetCode_983_Minimum%20Cost%20For%20Tickets.md)
 * [LeetCode_1027_Longest Arithmetic Sequence](./MdFile/LeetCode_1027_Longest%20Arithmetic%20Sequence.md)
 * [LeetCode_1044_Path In Zigzag Labelled Binary Tree](./MdFile/LeetCode_1044_Path%20In%20Zigzag%20Labelled%20Binary%20Tree.md)
 * [LeetCode_1074_Number of Submatrices That Sum to Target](./MdFile/LeetCode_1074_Number%20of%20Submatrices%20That%20Sum%20to%20Target.md)
