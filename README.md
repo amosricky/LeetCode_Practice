@@ -23,6 +23,7 @@
 * [LeetCode_746_Min Cost Climbing Stairs](./MdFile/LeetCode_746_Min%20Cost%20Climbing%20Stairs.md)
 * [LeetCode_771_Jewels and Stones](./MdFile/LeetCode_771_Jewels%20and%20Stones.md)
 * [LeetCode_890_Find and Replace Pattern](./MdFile/LeetCode_890_Find%20and%20Replace%20Pattern.md)
+* [LeetCode_921_Minimum Add to Make Parentheses Valid](./MdFile/LeetCode_921_Minimum%20Add%20to%20Make%20Parentheses%20Valid.md)
 * [LeetCode_938_Range Sum of BST](./MdFile/LeetCode_938_Range%20Sum%20of%20BST.md)
 * [LeetCode_950_Reveal Cards In Increasing Order](./MdFile/LeetCode_950_Reveal%20Cards%20In%20Increasing%20Order.md)
 * [LeetCode_983_Minimum Cost For Tickets](./MdFile/LeetCode_983_Minimum%20Cost%20For%20Tickets.md)
