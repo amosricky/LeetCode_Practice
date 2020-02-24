@@ -53,4 +53,33 @@ class Solution:
         return res
 ```
 
+## Solution3
+* Divide and Conquer
+* subStart : max contiguous sum in nums[start:end] including the first value
+* mid : max contiguous sum in nums[start:end] anywhere 
+* subEnd : max contiguous sum in nums[start:end] including the last value
+* subSum : the sum of all values in nums[start:end]
+
+### Code1
+```python
+class Solution:
+    def maxSubArray(self, nums):
+        def divide_and_conquer(nums, start, end):
+            if start == end - 1:
+                return nums[start], nums[start], nums[start], nums[start]
+
+            mid = (start + end) // 2
+            subStart_l, mid_l, subEnd_l, subSum_l = divide_and_conquer(nums, start, mid)
+            subStart_r, mid_r, subEnd_r, subSum_r = divide_and_conquer(nums, mid, end)
+
+            subStart = max(subStart_l, subSum_l + subStart_r)
+            mid = max(mid_l, mid_r, subEnd_l + subStart_r)
+            subEnd = max(subEnd_r, subSum_r + subEnd_l)
+            subSum = subSum_l + subSum_r
+
+            return subStart, mid, subEnd, subSum
+        _, res, _, _ = divide_and_conquer(nums, 0, len(nums))
+        return res
+```
+
 ###### tags: `LeetCode` `python` `Maximum Subarray` 

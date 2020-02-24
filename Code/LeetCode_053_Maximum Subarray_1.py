@@ -12,6 +12,8 @@ class Solution:
         return maxIncrease
 
 
+
 myClass = Solution()
-result = myClass.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+# result = myClass.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+result = myClass.maxSubArray([-2, 3, 2])
 print(result)
