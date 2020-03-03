@@ -60,4 +60,50 @@ class Solution:
         return i == s_len
 ```
 
+## Solution3
+* Binary Search
+* 先以 record 紀錄 t 中所有 char 的 index, 再取 s 中的 char 與 record 中對應的 index list 進行 binary search
+
+### Code3
+```python
+class Solution:
+    def isSubsequence(self, s: "str", t: "str") -> "bool":
+
+        pre = -1
+        record = {}
+        for index, value in enumerate(t):
+            if value not in record.keys():
+                record[value] = [index]
+            else:
+                record[value].append(index)
+
+        for char in s:
+            if char not in record.keys():
+                return False
+            pre = self.binarySearch(record[char], pre)
+
+            if pre == -1:
+                return False
+
+            pre += 1
+
+        return True
+
+    def binarySearch(self, recordList: "list", target: "int") -> "int":
+
+        left, right = 0, len(recordList)-1
+
+        while left < right:
+            mid = (left + right) // 2
+            if recordList[mid] < target:
+                left = mid + 1
+            else:
+                right = mid
+
+        if recordList[left] < target:
+            return -1
+
+        return recordList[left]
+```
+
 ###### tags: `LeetCode` `python` `Is Subsequence` 
