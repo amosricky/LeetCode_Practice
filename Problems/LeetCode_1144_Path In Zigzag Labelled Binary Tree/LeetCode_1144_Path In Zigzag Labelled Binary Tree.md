@@ -1,4 +1,4 @@
-# 【LeetCode】 1044. Path In Zigzag Labelled Binary Tree
+# 【LeetCode】 1144. Path In Zigzag Labelled Binary Tree
 
 ## Description
 In an infinite binary tree where every node has two children, the nodes are labelled in row order.
