@@ -135,6 +135,6 @@ class Solution:
 
 ## Solution3
 * Non-Recursive without using stack。
-* [Threaded Binary Tree](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
+* [Morris traversal for Inorder](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
 
 ###### tags: `python` `In-order Tree Traversal` 
